@@ -1,0 +1,3 @@
+/Users/izmalk/CLionProjects/cpp-driver-test/cmake-build-debug/CMakeFiles/cpp_driver_test.dir
+/Users/izmalk/CLionProjects/cpp-driver-test/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/izmalk/CLionProjects/cpp-driver-test/cmake-build-debug/CMakeFiles/rebuild_cache.dir

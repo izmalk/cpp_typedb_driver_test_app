@@ -4,7 +4,7 @@
 
 int main() {
     try {
-        TypeDB::Driver driver = TypeDB::Driver::coreDriver("127.0.0.1:1729");
+        TypeDB::Driver driver = TypeDB::Driver::cloudDriver({"127.0.0.1:1729"}, TypeDB::Credential("admin", "password", false));
         std::string dbName = "test_cpp";
         if (driver.databases.contains(dbName)) {
             std::cout << "The DB " + dbName + " exists already. Deleting..." << std::endl;

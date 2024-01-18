@@ -1,6 +1,6 @@
 #include <iostream>
 
-#include <typedb.hpp>
+#include <typedb_driver.hpp>
 
 int main() {
     try {
@@ -16,11 +16,7 @@ int main() {
         std::cout << "Created a new DB." << std::endl;
         if (!driver.databases.contains(dbName)) return 1;
         std::cout << "A new DB is ready." << std::endl;
-        TypeDB::Options options;
-        {
-            auto session = driver.session(dbName, TypeDB::SessionType::SCHEMA, options);
-            auto tx = session.transaction(TypeDB::TransactionType::WRITE, options);
-            tx.query.define("define\n"
+        std::string query ="define\n"
                             "\n"
                             "id sub attribute, value long;\n"
                             "email sub attribute, value string;\n"
@@ -31,7 +27,17 @@ int main() {
                             "    owns email,\n"
                             "    abstract;\n"
                             "\n"
-                            "person sub user, owns full-name;", options).get();
+                            "person sub user, owns full-name;";
+        TypeDB::Options options;
+        {
+            std::cout << "Opening session..." << std::endl;
+            auto session = driver.session(dbName, TypeDB::SessionType::SCHEMA, options);
+            std::cout << "Opening transaction..." << std::endl;
+            auto tx = session.transaction(TypeDB::TransactionType::WRITE, options);
+            std::cout << "Preparing query" << std::endl;
+            std::cout << "Sending query..." << std::endl;
+            tx.query.define(query, options).get();
+            std::cout << "Query sent." << std::endl;
             tx.commit();
             std::cout << "Schema is defined." << std::endl;
         }

@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/Users/vladimir/Documents/GitHub/cpp_typedb_driver_test_app/typedb_test.cpp" "CMakeFiles/cpp_driver_test.dir/typedb_test.cpp.o" "gcc" "CMakeFiles/cpp_driver_test.dir/typedb_test.cpp.o.d"
+  "/Users/vladimir/Documents/GitHub/cpp_typedb_driver_test_app/quickstart_code2.cpp" "CMakeFiles/cpp_driver_test.dir/quickstart_code2.cpp.o" "gcc" "CMakeFiles/cpp_driver_test.dir/quickstart_code2.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

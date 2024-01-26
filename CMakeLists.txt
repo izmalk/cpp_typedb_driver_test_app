@@ -6,7 +6,7 @@ link_directories(${PROJECT_SOURCE_DIR}/lib)
 include_directories(${PROJECT_SOURCE_DIR}/include)
 # add_library(typedb-driver-cpp ${PROJECT_SOURCE_DIR}/lib)
 
-add_executable(cpp_driver_test typedb_test.cpp)
+add_executable(cpp_driver_test quickstart_code2.cpp)
 IF (WIN32)
     target_link_libraries(cpp_driver_test ${PROJECT_SOURCE_DIR}/lib/typedb-driver-cpp.if.lib)
 ELSE()

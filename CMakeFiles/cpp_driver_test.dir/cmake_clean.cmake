@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/cpp_driver_test.dir/typedb_test.cpp.o"
-  "CMakeFiles/cpp_driver_test.dir/typedb_test.cpp.o.d"
+  "CMakeFiles/cpp_driver_test.dir/quickstart_code2.cpp.o"
+  "CMakeFiles/cpp_driver_test.dir/quickstart_code2.cpp.o.d"
   "cpp_driver_test"
   "cpp_driver_test.pdb"
 )

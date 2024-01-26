@@ -129,29 +129,29 @@ cpp_driver_test/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/cpp_driver_test.dir/build.make CMakeFiles/cpp_driver_test.dir/build
 .PHONY : cpp_driver_test/fast
 
-typedb_test.o: typedb_test.cpp.o
-.PHONY : typedb_test.o
+quickstart_code2.o: quickstart_code2.cpp.o
+.PHONY : quickstart_code2.o
 
 # target to build an object file
-typedb_test.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cpp_driver_test.dir/build.make CMakeFiles/cpp_driver_test.dir/typedb_test.cpp.o
-.PHONY : typedb_test.cpp.o
+quickstart_code2.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cpp_driver_test.dir/build.make CMakeFiles/cpp_driver_test.dir/quickstart_code2.cpp.o
+.PHONY : quickstart_code2.cpp.o
 
-typedb_test.i: typedb_test.cpp.i
-.PHONY : typedb_test.i
+quickstart_code2.i: quickstart_code2.cpp.i
+.PHONY : quickstart_code2.i
 
 # target to preprocess a source file
-typedb_test.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cpp_driver_test.dir/build.make CMakeFiles/cpp_driver_test.dir/typedb_test.cpp.i
-.PHONY : typedb_test.cpp.i
+quickstart_code2.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cpp_driver_test.dir/build.make CMakeFiles/cpp_driver_test.dir/quickstart_code2.cpp.i
+.PHONY : quickstart_code2.cpp.i
 
-typedb_test.s: typedb_test.cpp.s
-.PHONY : typedb_test.s
+quickstart_code2.s: quickstart_code2.cpp.s
+.PHONY : quickstart_code2.s
 
 # target to generate assembly for a file
-typedb_test.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cpp_driver_test.dir/build.make CMakeFiles/cpp_driver_test.dir/typedb_test.cpp.s
-.PHONY : typedb_test.cpp.s
+quickstart_code2.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cpp_driver_test.dir/build.make CMakeFiles/cpp_driver_test.dir/quickstart_code2.cpp.s
+.PHONY : quickstart_code2.cpp.s
 
 # Help Target
 help:
@@ -162,9 +162,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... cpp_driver_test"
-	@echo "... typedb_test.o"
-	@echo "... typedb_test.i"
-	@echo "... typedb_test.s"
+	@echo "... quickstart_code2.o"
+	@echo "... quickstart_code2.i"
+	@echo "... quickstart_code2.s"
 .PHONY : help
 
 

@@ -57,10 +57,10 @@ RM = /usr/local/Cellar/cmake/3.28.1/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/vladimir/Documents/GitHub/cpp_typedb_driver_test_app
+CMAKE_SOURCE_DIR = /Users/izmalk/CLionProjects/cpp_typedb_driver_test_app
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/vladimir/Documents/GitHub/cpp_typedb_driver_test_app
+CMAKE_BINARY_DIR = /Users/izmalk/CLionProjects/cpp_typedb_driver_test_app
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/vladimir/Documents/GitHub/cpp_typedb_driver_test_app/CMakeFiles /Users/vladimir/Documents/GitHub/cpp_typedb_driver_test_app//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/izmalk/CLionProjects/cpp_typedb_driver_test_app/CMakeFiles /Users/izmalk/CLionProjects/cpp_typedb_driver_test_app//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/vladimir/Documents/GitHub/cpp_typedb_driver_test_app/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/izmalk/CLionProjects/cpp_typedb_driver_test_app/CMakeFiles 0
 .PHONY : all
 
 # The main clean target

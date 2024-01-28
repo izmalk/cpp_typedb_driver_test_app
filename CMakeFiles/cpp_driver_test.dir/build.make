@@ -53,10 +53,10 @@ RM = /usr/local/Cellar/cmake/3.28.1/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/vladimir/Documents/GitHub/cpp_typedb_driver_test_app
+CMAKE_SOURCE_DIR = /Users/izmalk/CLionProjects/cpp_typedb_driver_test_app
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/vladimir/Documents/GitHub/cpp_typedb_driver_test_app
+CMAKE_BINARY_DIR = /Users/izmalk/CLionProjects/cpp_typedb_driver_test_app
 
 # Include any dependencies generated for this target.
 include CMakeFiles/cpp_driver_test.dir/depend.make
@@ -69,31 +69,31 @@ include CMakeFiles/cpp_driver_test.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/cpp_driver_test.dir/flags.make
 
-CMakeFiles/cpp_driver_test.dir/quickstart_code2.cpp.o: CMakeFiles/cpp_driver_test.dir/flags.make
-CMakeFiles/cpp_driver_test.dir/quickstart_code2.cpp.o: quickstart_code2.cpp
-CMakeFiles/cpp_driver_test.dir/quickstart_code2.cpp.o: CMakeFiles/cpp_driver_test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/vladimir/Documents/GitHub/cpp_typedb_driver_test_app/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/cpp_driver_test.dir/quickstart_code2.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/cpp_driver_test.dir/quickstart_code2.cpp.o -MF CMakeFiles/cpp_driver_test.dir/quickstart_code2.cpp.o.d -o CMakeFiles/cpp_driver_test.dir/quickstart_code2.cpp.o -c /Users/vladimir/Documents/GitHub/cpp_typedb_driver_test_app/quickstart_code2.cpp
+CMakeFiles/cpp_driver_test.dir/quickstart_code.cpp.o: CMakeFiles/cpp_driver_test.dir/flags.make
+CMakeFiles/cpp_driver_test.dir/quickstart_code.cpp.o: quickstart_code.cpp
+CMakeFiles/cpp_driver_test.dir/quickstart_code.cpp.o: CMakeFiles/cpp_driver_test.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/izmalk/CLionProjects/cpp_typedb_driver_test_app/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/cpp_driver_test.dir/quickstart_code.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/cpp_driver_test.dir/quickstart_code.cpp.o -MF CMakeFiles/cpp_driver_test.dir/quickstart_code.cpp.o.d -o CMakeFiles/cpp_driver_test.dir/quickstart_code.cpp.o -c /Users/izmalk/CLionProjects/cpp_typedb_driver_test_app/quickstart_code.cpp
 
-CMakeFiles/cpp_driver_test.dir/quickstart_code2.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/cpp_driver_test.dir/quickstart_code2.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/vladimir/Documents/GitHub/cpp_typedb_driver_test_app/quickstart_code2.cpp > CMakeFiles/cpp_driver_test.dir/quickstart_code2.cpp.i
+CMakeFiles/cpp_driver_test.dir/quickstart_code.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/cpp_driver_test.dir/quickstart_code.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/izmalk/CLionProjects/cpp_typedb_driver_test_app/quickstart_code.cpp > CMakeFiles/cpp_driver_test.dir/quickstart_code.cpp.i
 
-CMakeFiles/cpp_driver_test.dir/quickstart_code2.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/cpp_driver_test.dir/quickstart_code2.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/vladimir/Documents/GitHub/cpp_typedb_driver_test_app/quickstart_code2.cpp -o CMakeFiles/cpp_driver_test.dir/quickstart_code2.cpp.s
+CMakeFiles/cpp_driver_test.dir/quickstart_code.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/cpp_driver_test.dir/quickstart_code.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/izmalk/CLionProjects/cpp_typedb_driver_test_app/quickstart_code.cpp -o CMakeFiles/cpp_driver_test.dir/quickstart_code.cpp.s
 
 # Object files for target cpp_driver_test
 cpp_driver_test_OBJECTS = \
-"CMakeFiles/cpp_driver_test.dir/quickstart_code2.cpp.o"
+"CMakeFiles/cpp_driver_test.dir/quickstart_code.cpp.o"
 
 # External object files for target cpp_driver_test
 cpp_driver_test_EXTERNAL_OBJECTS =
 
-cpp_driver_test: CMakeFiles/cpp_driver_test.dir/quickstart_code2.cpp.o
+cpp_driver_test: CMakeFiles/cpp_driver_test.dir/quickstart_code.cpp.o
 cpp_driver_test: CMakeFiles/cpp_driver_test.dir/build.make
 cpp_driver_test: CMakeFiles/cpp_driver_test.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/vladimir/Documents/GitHub/cpp_typedb_driver_test_app/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable cpp_driver_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/izmalk/CLionProjects/cpp_typedb_driver_test_app/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable cpp_driver_test"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/cpp_driver_test.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -105,6 +105,6 @@ CMakeFiles/cpp_driver_test.dir/clean:
 .PHONY : CMakeFiles/cpp_driver_test.dir/clean
 
 CMakeFiles/cpp_driver_test.dir/depend:
-	cd /Users/vladimir/Documents/GitHub/cpp_typedb_driver_test_app && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/vladimir/Documents/GitHub/cpp_typedb_driver_test_app /Users/vladimir/Documents/GitHub/cpp_typedb_driver_test_app /Users/vladimir/Documents/GitHub/cpp_typedb_driver_test_app /Users/vladimir/Documents/GitHub/cpp_typedb_driver_test_app /Users/vladimir/Documents/GitHub/cpp_typedb_driver_test_app/CMakeFiles/cpp_driver_test.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /Users/izmalk/CLionProjects/cpp_typedb_driver_test_app && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/izmalk/CLionProjects/cpp_typedb_driver_test_app /Users/izmalk/CLionProjects/cpp_typedb_driver_test_app /Users/izmalk/CLionProjects/cpp_typedb_driver_test_app /Users/izmalk/CLionProjects/cpp_typedb_driver_test_app /Users/izmalk/CLionProjects/cpp_typedb_driver_test_app/CMakeFiles/cpp_driver_test.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/cpp_driver_test.dir/depend
 

@@ -57,10 +57,10 @@ RM = /usr/local/Cellar/cmake/3.28.1/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/vladimir/Documents/GitHub/cpp_typedb_driver_test_app
+CMAKE_SOURCE_DIR = /Users/izmalk/CLionProjects/cpp_typedb_driver_test_app
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/vladimir/Documents/GitHub/cpp_typedb_driver_test_app
+CMAKE_BINARY_DIR = /Users/izmalk/CLionProjects/cpp_typedb_driver_test_app
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/vladimir/Documents/GitHub/cpp_typedb_driver_test_app/CMakeFiles /Users/vladimir/Documents/GitHub/cpp_typedb_driver_test_app//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/izmalk/CLionProjects/cpp_typedb_driver_test_app/CMakeFiles /Users/izmalk/CLionProjects/cpp_typedb_driver_test_app//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/vladimir/Documents/GitHub/cpp_typedb_driver_test_app/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/izmalk/CLionProjects/cpp_typedb_driver_test_app/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -129,29 +129,29 @@ cpp_driver_test/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/cpp_driver_test.dir/build.make CMakeFiles/cpp_driver_test.dir/build
 .PHONY : cpp_driver_test/fast
 
-quickstart_code2.o: quickstart_code2.cpp.o
-.PHONY : quickstart_code2.o
+quickstart_code.o: quickstart_code.cpp.o
+.PHONY : quickstart_code.o
 
 # target to build an object file
-quickstart_code2.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cpp_driver_test.dir/build.make CMakeFiles/cpp_driver_test.dir/quickstart_code2.cpp.o
-.PHONY : quickstart_code2.cpp.o
+quickstart_code.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cpp_driver_test.dir/build.make CMakeFiles/cpp_driver_test.dir/quickstart_code.cpp.o
+.PHONY : quickstart_code.cpp.o
 
-quickstart_code2.i: quickstart_code2.cpp.i
-.PHONY : quickstart_code2.i
+quickstart_code.i: quickstart_code.cpp.i
+.PHONY : quickstart_code.i
 
 # target to preprocess a source file
-quickstart_code2.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cpp_driver_test.dir/build.make CMakeFiles/cpp_driver_test.dir/quickstart_code2.cpp.i
-.PHONY : quickstart_code2.cpp.i
+quickstart_code.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cpp_driver_test.dir/build.make CMakeFiles/cpp_driver_test.dir/quickstart_code.cpp.i
+.PHONY : quickstart_code.cpp.i
 
-quickstart_code2.s: quickstart_code2.cpp.s
-.PHONY : quickstart_code2.s
+quickstart_code.s: quickstart_code.cpp.s
+.PHONY : quickstart_code.s
 
 # target to generate assembly for a file
-quickstart_code2.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cpp_driver_test.dir/build.make CMakeFiles/cpp_driver_test.dir/quickstart_code2.cpp.s
-.PHONY : quickstart_code2.cpp.s
+quickstart_code.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cpp_driver_test.dir/build.make CMakeFiles/cpp_driver_test.dir/quickstart_code.cpp.s
+.PHONY : quickstart_code.cpp.s
 
 # Help Target
 help:
@@ -162,9 +162,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... cpp_driver_test"
-	@echo "... quickstart_code2.o"
-	@echo "... quickstart_code2.i"
-	@echo "... quickstart_code2.s"
+	@echo "... quickstart_code.o"
+	@echo "... quickstart_code.i"
+	@echo "... quickstart_code.s"
 .PHONY : help
 
 

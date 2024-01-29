@@ -38,18 +38,15 @@ int main() {
             auto session = driver.session(dbName, TypeDB::SessionType::DATA, options);
             {
                 auto tx = session.transaction(TypeDB::TransactionType::WRITE, options);
-                tx.query.insert("insert $p isa person, has name 'Alice';", options);
-                tx.query.insert("insert $p isa person, has name 'Bob';", options);
+                (void) tx.query.insert("insert $p isa person, has name 'Alice';", options);
+                (void) tx.query.insert("insert $p isa person, has name 'Bob';", options);
                 tx.commit();
             }
             {
                 auto tx = session.transaction(TypeDB::TransactionType::READ, options);
                 TypeDB::JSONIterable result = tx.query.fetch("match $p isa person; fetch $p: name;", options);
                 for (TypeDB::JSON json : result) {
-                    printJson(json);
-                    //for (const auto& pair : json.asMap()) {
-                        //std::cout << pair.first << ":" << pair.second << std::endl;
-                    //}
+                    printJson(json.toString());
                 }
                 tx.close();
             }

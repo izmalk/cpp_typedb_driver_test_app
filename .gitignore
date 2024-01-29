@@ -33,3 +33,7 @@
 .DS_Store
 .idea/
 Makefile
+./CMakeFiles
+CMakeCache.txt
+*.cmake
+cpp_driver_test

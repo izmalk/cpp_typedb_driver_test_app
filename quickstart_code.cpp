@@ -58,6 +58,7 @@ int main() {
             {
                 auto tx = session.transaction(TypeDB::TransactionType::READ, options);
                 TypeDB::JSONIterable result = tx.query.fetch("match $u isa user, has name 'Bob'; fetch $u: name, email;", options);
+                //TypeDB::JSONIterable result = tx.query.fetch("match $u isa user; fetch $u: name, email; sort $u;", options);
                 std::string res;
                 for (TypeDB::JSON json : result) {
                     //std::cout << json.toString() << std::endl;

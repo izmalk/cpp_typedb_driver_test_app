@@ -29,25 +29,41 @@ int main() {
         {
             auto session = driver.session(dbName, TypeDB::SessionType::SCHEMA, options);
             auto tx = session.transaction(TypeDB::TransactionType::WRITE, options);
-            //std::string
-            tx.query.define("define person sub entity;", options).get();
-            tx.query.define("define name sub attribute, value string; person owns name;", options).get();
+            std::string schema = R"(
+                                define
+
+                                email sub attribute, value string;
+                                name sub attribute, value string;
+                                friendship sub relation, relates friend;
+                                user sub entity,
+                                    owns email @key,
+                                    owns name,
+                                    plays friendship:friend;
+                                admin sub user;)";
+            tx.query.define(schema, options).get();
             tx.commit();
         }
         {
             auto session = driver.session(dbName, TypeDB::SessionType::DATA, options);
             {
                 auto tx = session.transaction(TypeDB::TransactionType::WRITE, options);
-                (void) tx.query.insert("insert $p isa person, has name 'Alice';", options);
-                (void) tx.query.insert("insert $p isa person, has name 'Bob';", options);
+                std::string insertQuery = R"(
+                                            insert
+                                            $user1 isa user, has name "Alice", has email "alice@vaticle.com";
+                                            $user2 isa user, has name "Bob", has email "bob@vaticle.com";
+                                            $user3 isa user, has name "Charlie", has email "charlie@vaticle.com";)";
+                (void) tx.query.insert(insertQuery, options);
                 tx.commit();
             }
             {
                 auto tx = session.transaction(TypeDB::TransactionType::READ, options);
-                TypeDB::JSONIterable result = tx.query.fetch("match $p isa person; fetch $p: name;", options);
+                TypeDB::JSONIterable result = tx.query.fetch("match $u isa user, has name 'Bob'; fetch $u: name, email;", options);
+                std::string res;
                 for (TypeDB::JSON json : result) {
-                    printJson(json.toString());
+                    //std::cout << json.toString() << std::endl;
+                    res.append(json.toString());
                 }
+                std::cout << res << std::endl;
                 tx.close();
             }
         }

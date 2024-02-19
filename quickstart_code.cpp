@@ -57,7 +57,7 @@ int main() {
             }
             {
                 auto tx = session.transaction(TypeDB::TransactionType::READ, options);
-                TypeDB::JSONIterable result = tx.query.fetch("match $u isa user, has name 'Bob'; fetch $u: name, email;", options);
+                TypeDB::JSONIterable result = tx.query.fetch("match $u isa user; fetch $u: name, email;", options);
                 //TypeDB::JSONIterable result = tx.query.fetch("match $u isa user; fetch $u: name, email; sort $u;", options);
                 std::string res;
                 for (TypeDB::JSON json : result) {
@@ -67,6 +67,18 @@ int main() {
                 std::cout << res << std::endl;
                 tx.close();
             }
+//            {
+//                std::cout << "Comparing..." << std::endl;
+//                //std::string longerFetchResult = R"({"u": {"email": [{"type": {"label": "email", "root": "attribute", "value_type": "string"}, "value": "alice@vaticle.com"}], "name": [{"type": {"label": "name", "root": "attribute", "value_type": "string"}, "value": "Alice"}], "type": {"label": "user", "root": "entity"}}}{"u": {"email": [{"type": {"label": "email", "root": "attribute", "value_type": "string"}, "value": "bob@vaticle.com"}], "name": [{"type": {"label": "name", "root": "attribute", "value_type": "string"}, "value": "Bob"}], "type": {"label": "user", "root": "entity"}}}{"u": {"email": [{"type": {"label": "email", "root": "attribute", "value_type": "string"}, "value": "charlie@vaticle.com"}], "name": [{"type": {"label": "name", "root": "attribute", "value_type": "string"}, "value": "Charlie"}], "type": {"label": "user", "root": "entity"}}})";
+//{"u": {"email": [{"type": {"label": "email", "root": "attribute", "value_type": "string"}, "value": "alice@vaticle.com"}], "name": [{"type": {"label": "name", "root": "attribute", "value_type": "string"}, "value": "Alice"}], "type": {"label": "user", "root": "entity"}}}
+//{"u": {"email": [{"type": {"label": "email", "root": "attribute", "value_type": "string"}, "value": "bob@vaticle.com"}], "name": [{"type": {"label": "name", "root": "attribute", "value_type": "string"}, "value": "Bob"}], "type": {"label": "user", "root": "entity"}}}
+//{"u": {"email": [{"type": {"label": "email", "root": "attribute", "value_type": "string"}, "value": "charlie@vaticle.com"}], "name": [{"type": {"label": "name", "root": "attribute", "value_type": "string"}, "value": "Charlie"}], "type": {"label": "user", "root": "entity"}}}
+//                std::cout << longerFetchResult << std::endl;
+//                std::cout << TypeDB::JSON::parse(longerFetchResult).toString() << std::endl;
+//                if (longerFetchResult == TypeDB::JSON::parse(longerFetchResult).toString()) {
+//                    std::cout << "EQUAL" << std::endl;
+//                }
+//            }
         }
     } catch (TypeDB::DriverException e ) {
         std::cout << "Caught TypeDB::DriverException: " << e.code() << "\n" << e.message()  << std::endl;

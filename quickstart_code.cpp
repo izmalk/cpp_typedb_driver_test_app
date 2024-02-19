@@ -79,6 +79,31 @@ int main() {
 //                    std::cout << "EQUAL" << std::endl;
 //                }
 //            }
+            {
+                auto tx = session.transaction(TypeDB::TransactionType::READ, options);
+                TypeDB::JSONIterable result = tx.query.fetch("match ?l = 22; fetch ?l;", options);
+                std::string resLong;
+                for (TypeDB::JSON json : result) {
+                    resLong.append(json.toString());
+                }
+                std::cout << "Long test: " << resLong << std::endl;
+
+                result = tx.query.fetch("match ?d = 2.22; fetch ?d;", options);
+                std::string resDouble;
+                for (TypeDB::JSON json : result) {
+                    resDouble.append(json.toString());
+                }
+                std::cout << "Double test: " << resDouble << std::endl;
+
+                result = tx.query.fetch("match ?d = 2.22; ?b = true; fetch ?b;", options);
+                std::string resBool;
+                for (TypeDB::JSON json : result) {
+                    resBool.append(json.toString());
+                }
+                std::cout << "Boolean test: " << resBool << std::endl;
+
+                tx.close();
+            }
         }
     } catch (TypeDB::DriverException e ) {
         std::cout << "Caught TypeDB::DriverException: " << e.code() << "\n" << e.message()  << std::endl;
